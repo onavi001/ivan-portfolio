@@ -71,17 +71,6 @@ export default function Projects() {
                       Backend Repo
                     </a>
                   )}
-                  {project.repo && (
-                    <a
-                      href={project.repo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-gray-700 dark:text-gray-300 hover:underline"
-                    >
-                      <Github className="w-5 h-5 mr-2" />
-                      Repository
-                    </a>
-                  )}
                 </div>
               </div>
             </div>
