@@ -1,6 +1,6 @@
 import { personalInfo, socialLinks } from '../data/resumeData';
 import { Download } from 'lucide-react';
-
+import resume from '../assets/resume.pdf';
 export default function Hero() {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-black px-6">
@@ -17,8 +17,8 @@ export default function Hero() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
           <a
-            href="/path-to-your-cv.pdf" // Cambia por tu PDF real o quita si no quieres
-            download
+            href={resume}
+            download="Ivan_Resume.pdf"
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition"
           >
             <Download className="w-5 h-5 mr-2" />
