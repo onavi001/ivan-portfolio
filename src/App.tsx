@@ -12,34 +12,36 @@ const sectionVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: easeOut } },
 };
 
+const sections = [
+  { id: 'home', component: Hero },
+  { id: 'projects', component: Projects },
+  { id: 'experience', component: Experience },
+  { id: 'skills', component: Skills },
+  { id: 'education', component: Education },
+  { id: 'contact', component: Contact },
+];
+
 function App() {
   return (
-    <div className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white">
+    <div className="min-h-screen bg-transparent text-slate-900 dark:text-slate-100">
       <Navbar />
-      
-      <motion.section id="home" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={sectionVariants}>
-        <Hero />
-      </motion.section>
 
-      <motion.section id="experience" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={sectionVariants}>
-        <Experience />
-      </motion.section>
-
-      <motion.section id="projects" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={sectionVariants}>
-        <Projects />
-      </motion.section>
-
-      <motion.section id="skills" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={sectionVariants}>
-        <Skills />
-      </motion.section>
-
-      <motion.section id="education" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={sectionVariants}>
-        <Education />
-      </motion.section>
-
-      <motion.section id="contact" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={sectionVariants}>
-        <Contact />
-      </motion.section>
+      {sections.map((section, index) => {
+        const SectionComponent = section.component;
+        return (
+          <motion.section
+            key={section.id}
+            id={section.id}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={sectionVariants}
+            transition={{ delay: index * 0.06 }}
+          >
+            <SectionComponent />
+          </motion.section>
+        );
+      })}
     </div>
   );
 }

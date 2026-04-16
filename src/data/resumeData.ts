@@ -75,6 +75,50 @@ export const experience = [
 
 export const projects = [
   {
+    title: "Mi Dieta",
+    description:
+      "React web app for weekly meal planning, nutrition tracking, and automated grocery list generation. Includes a guided nutrition flow and smart meal-slot balancing to keep plans consistent and practical.",
+    liveUrl: "https://mi-dieta.netlify.app/",
+    liveLabel: "Live App",
+    frontendRepo: "https://github.com/onavi001/mi-dieta",
+    backendRepo: "https://github.com/onavi001/mi-dieta-api",
+    technologies: ["React 19", "TypeScript 5", "Vite 8", "Tailwind CSS 4", "Vitest", "Netlify"],
+    metrics: ["Daily/Weekly Diet Views", "Guided Nutrition Workflow", "Allergy & Intolerance Adjustments"],
+    highlights: [
+      "Authentication and session flow connected to the mi-dieta-api backend",
+      "Weekly generation with automatic similar-meal assignment per slot",
+      "Ingredient adjustments for allergies and intolerances plus grocery list from active plan",
+    ],
+  },
+  {
+    title: "Mi Dieta API",
+    description:
+      "REST backend for Mi Dieta built with Express 5 + Supabase. Exposes authentication, meals catalog, plan generation, slot alternatives, and nutrition endpoints.",
+    repo: "https://github.com/onavi001/mi-dieta-api",
+    technologies: ["Node.js", "Express 5", "Supabase", "CORS", "Helmet", "REST API"],
+    metrics: ["Health Endpoint (/health)", "Seed + Verify Meals Catalog", "Auth / Plans / Nutrition APIs"],
+    highlights: [
+      "Key routes for auth, meals, plans, and nutrition in a modular backend architecture",
+      "Seed and verification scripts for curated meals catalog",
+      "Deployment-ready for Render or Railway with /health checks",
+    ],
+  },
+  {
+    title: "Navi UI",
+    description:
+      "Enterprise-grade React component library focused on accessibility, strict TypeScript typing, and scalable theming. Built for teams that need speed without sacrificing quality.",
+    liveUrl: "https://www.npmjs.com/package/@navi01/react",
+    liveLabel: "NPM Package",
+    repo: "https://github.com/onavi001/navi-ui",
+    technologies: ["React 19", "TypeScript 5.8", "Tailwind CSS 4", "Radix UI", "Storybook", "Vitest"],
+    metrics: ["38+ Components", "4 Full Templates", "WCAG 2.2 AA First"],
+    highlights: [
+      "38+ production-ready components and 4 full-page templates",
+      "WCAG 2.2 AA compliance with full keyboard and screen reader support",
+      "Theme-ready architecture with CSS variables and integrated dark mode",
+    ],
+  },
+  {
     title: "MyVoice – Personal Gym Trainer App",
     description:
       "Fullstack application that tracks gym routines, allows users to create/edit workouts, and uses AI to generate personalized training plans based on goals, schedule, and available equipment. Integrates Grok API for AI and YouTube API for exercise videos.",

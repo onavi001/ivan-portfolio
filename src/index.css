@@ -1,8 +1,53 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&display=swap');
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: light;
+}
 
 html {
-  @apply bg-white dark:bg-black text-gray-900 dark:text-white;
+  scroll-behavior: smooth;
 }
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background: radial-gradient(circle at 10% 10%, #dcfce7 0%, #ecfeff 30%, #ffffff 60%);
+  color: #0f172a;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background: radial-gradient(circle at 15% -10%, #0b2b3a 0%, #0b132b 35%, #020617 65%);
+  color: #e2e8f0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Sora', sans-serif;
+}
+
+.section-title {
+  color: #0f172a;
+}
+
+.section-strong {
+  color: #020617;
+}
+
+html.dark .section-title {
+  color: #f8fafc;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.45), 0 0 24px rgba(56, 189, 248, 0.2);
+}
+
+html.dark .section-strong {
+  color: #ffffff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.55), 0 0 20px rgba(16, 185, 129, 0.25);
+}
