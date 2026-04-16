@@ -28,6 +28,14 @@ function App() {
 
       {sections.map((section, index) => {
         const SectionComponent = section.component;
+        // Remove animation for Projects section for instant render
+        if (section.id === 'projects') {
+          return (
+            <section key={section.id} id={section.id}>
+              <SectionComponent />
+            </section>
+          );
+        }
         return (
           <motion.section
             key={section.id}
